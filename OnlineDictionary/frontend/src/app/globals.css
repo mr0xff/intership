@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #f9f4f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes ray {
+  0%, 100% {
+    transform: translateY(-2px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(2px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.animate-ray {
+  animation: ray 1.5s infinite;
+}
